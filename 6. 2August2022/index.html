@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFn(){
+           let n1 = document.getElementById("n1").value;
+           if(n1==null || n1=="" || n1==" "){
+                //alert("Did not write anything");
+                document.getElementById("p1").innerHTML="<span style='color:red'> Did not write anything</span>";
+
+           }else{
+                document.getElementById("p1").innerHTML=n1;
+
+           }
+
+
+        //for boolean true or false , no concept of 0 & 1
+        // let k = true;
+        // if(k){
+        //     alert("ok");
+        // }else{
+        //     alert("not ok");
+        // }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="n1" id="n1" />
+    <button onclick="myFn()"> Click </button>
+    <p id ="p1"></p>
+</body>
+</html>

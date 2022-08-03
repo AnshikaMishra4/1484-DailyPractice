@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <script>
+  function myFn(){
+   var n1=document.getElementById('n1').value;
+   var n2=document.getElementById("n2").value;
+   n1=Number(n1);
+   n2=Number(n2);
+   if(isNaN(n1) || isNaN(n2)){
+    document.getElementById("p1").innerHTML="<span>Enter a number</span>"
+   }
+   else{
+    var total=parseInt(n1/n2);
+    var left=n1-(total*n2);
+    document.getElementById("p1").innerHTML+=total + " and balls left are : "+left;
+   }
+  }
+ </script>
+</head>
+<body>
+ <label>Enter Number of balls</label>
+ <input type="text" name="n1" id="n1">
+ <br><br>
+ <label>Enter number of teams</label>
+ <input type="text" name="n2" id="n2">
+ <br><br>
+ <button onClick="myFn()" >calculate</button>
+  <br><br>
+ <p id="p1">Each team will get: </p> 
+</body>
+</html>
