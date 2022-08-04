@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script>
+		// console.log(new Date().getDay());
+		// let day;
+		// switch(new Date().getDay()){
+		// 	case 0:
+		// 		day="Sunday";
+		// 		break;
+		// 	case 1:
+		// 		day="Monday";
+		// 		break;
+		// 	case 2:
+		// 		day="Tuesday";
+		// 		break;
+		// 	case 3:
+		// 		day="Wednesday";
+		// 		break;
+		// 	case 4:
+		// 		day="Thursday";
+		// 		break;
+		// 	case 5:
+		// 		day="Friday";
+		// 		break;
+		// 	case 6:
+		// 		day="Saturday";
+		// 		break;
+		// }
+
+		
+			
+
+		function submit(){
+			var n1=document.getElementById("i1").value;
+			n1=Number(n1);
+			if(isNaN(n1)){
+				document.getElementById("p1").innerHTML="not a number";
+			}
+			else if(n1%2==0){
+				document.getElementById("p1").innerHTML+="even ";
+				if(n1==2){
+					document.getElementById("p1").innerHTML+="and prime ";
+				}
+				else{
+					document.getElementById("p1").innerHTML+=" and is not prime";
+				}
+			}
+			else{
+				document.getElementById("p1").innerHTML+="odd ";
+				var i=2;
+				var prime=true;
+				while(i<n1){
+					if(n1%i==0){
+						prime=false;
+						break;
+					}
+					i++;
+				}
+				if(prime){
+					document.getElementById("p1").innerHTML+="and prime";
+				}
+				else{
+					document.getElementById("p1").innerHTML+="and is not prime";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<label>Enter a number :</label>
+	<input type="text" id="i1">
+	<button onClick="submit()">Check</button>
+	<p id="p1">Number given is : </p>
+</body>
+</html>
