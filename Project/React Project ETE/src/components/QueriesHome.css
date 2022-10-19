@@ -1,0 +1,32 @@
+th,td{
+    color:white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+thead >tr{
+    background-color:#0c1027;
+}
+
+tbody >tr{
+    background-color: #333957;
+}
+
+td >button{
+    color:white;
+    background-color: transparent;
+    cursor: pointer;
+    border:none
+}
+
+#icon{
+    color:white;
+    background-color: #333957;
+    cursor: pointer;
+    border:none
+}
+
+#logo{
+    margin-left:40%;
+    margin-top:10px
+}
