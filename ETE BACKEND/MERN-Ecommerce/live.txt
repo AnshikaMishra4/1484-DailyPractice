@@ -1,0 +1,5 @@
+Q. How to deploy it?
+A.
+1. Open the url "https://app.netlify.com/drop", make sure you are logged into netlify.
+2. Drag and drop the build folder in frontend.
+3. The live link will appear.

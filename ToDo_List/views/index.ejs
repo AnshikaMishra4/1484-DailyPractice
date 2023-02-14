@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title> ToDo App </title>
+    <style>
+        html {
+        background-color: #E4E9FD;
+        background-image: -webkit-linear-gradient(65deg, #99e9ad 50%, #e4fdf8 50%);
+        min-height: 1000px;
+        font-family: 'helvetica neue';
+      }
+      
+      h1 {
+        color: #fff;
+        padding: 10px;
+      }
+      
+      .box {
+        max-width: 400px;
+        margin: 50px auto;
+        background: rgb(195, 227, 183);
+        border-radius: 5px;
+        box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+      }
+      
+      #heading {
+        background-color: #10bb2f;
+        text-align: center;
+      }
+      
+      .item {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #F1F1F1;
+      }
+      
+      .item:last-child {
+        border-bottom: 0;
+      }
+      
+      input:checked+p {
+        text-decoration: line-through;
+        text-decoration-color: #151615;
+      }
+      
+      input[type="checkbox"] {
+        margin: 20px;
+      }
+      
+      p {
+        margin: 0;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 200;
+        color: #00204a;
+      }
+      
+      form {
+        text-align: center;
+        margin-left: 20px;
+      }
+      
+      button {
+        min-height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border-color: transparent;
+        background-color: #39e47e;
+        color: #fff;
+        font-size: 18px;
+        padding-bottom: 6px;
+        border-width: 0;
+      }
+      
+      input[type="text"] {
+        text-align: center;
+        height: 60px;
+        top: 10px;
+        border: none;
+        background: transparent;
+        font-size: 20px;
+        font-weight: 200;
+        width: 313px;
+      }
+      
+      input[type="text"]:focus {
+        outline: none;
+        box-shadow: inset 0 -3px 0 0 #83e38d;
+      }
+      
+      ::placeholder {
+        color: grey;
+        opacity: 1;
+      }
+      
+      
+        </style>
+  </head>
+<body>
+<div class="box" id="heading">
+    <h1> <%= listTitle %></h1>
+    </div>
+ <div class="box">
+<h2> A Simple ToDo List App </h2>
+<form class ="item" action ="/addtask" method="POST">
+        <input type="text" name="newtask" placeholder="add new task">    
+        <button> Add Task </button>
+    <h2> Added Task </h2>
+      <% for( var i = 0; i < task.length; i++){ %>
+       <li>
+        <input type="checkbox" name="check" value="<%= task[i] %>" /> 
+        <%= task[i] %>
+     </li>
+    <% } %>
+    <button formaction="/removetask" type="submit"> Remove </button>
+    <h2> Completed task </h2>
+    <% for(var i = 0; i < complete.length; i++){ %>
+      <li><input type="checkbox" checked><%= complete[i] %> </li>
+<% } %>
+</form>
+</div>
+</body>
+</html>

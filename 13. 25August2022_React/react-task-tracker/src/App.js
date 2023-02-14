@@ -1,16 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './component/header';
+import Header from './component/Header/Header';
 function App(){
   return(
     <div className='container'>
-    <Header title={12}/>
+      <Header title={'Task Tracker'}/>
     </div>
   );
 }
+export default App;
+// import Header from './component/registration';
+// import Login from './component/Login';
+// import Welcome from './component/welcome';
+// function App(){
+//   return(
+//     <div className='container'>
+//       <Welcome display = "welcome user"></Welcome>
+//       <Header Name = "Ria" Age  = "19" Address = "Chandigarh" Username = "riavv" Password = "vv"/>
+//       <Login username = "riavv" password = "vv" />
+      
+//     </div>
+//   );
+// }
 
-// const name = "Anshika";
-// const x = false;
+
+// import Header from './component/header';
+// function App(){
+//   return(
+//     <div className='container'>
+//     <Header title={12}/>
+//     </div>
+//   );
+// }
+
+// // const name = "Anshika";
+// // const x = false;
 
 // function App() {
 //   return(
@@ -22,4 +46,4 @@ function App(){
 //  );
 // }
 
-export default App;
+
